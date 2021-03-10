@@ -17,22 +17,42 @@
 
 ## Install
 
-```sh
+```bash
 npm install -g ignore-files
 ```
 
 ## Usage
 
-```sh
+```bash
 $ zsh -c "echo **/*.ts" | ignore .gitignore
 src/index.ts
 ```
 
 To use `bash` only, use [globstar](https://www.linuxjournal.com/content/globstar-new-bash-globbing-option).
 
+## Application
+
+For tools that don't support `.*ignore`
+
+```bash
+verilator --lint-only -Wall $(echo **/*.v | ignore .gitignore)
+```
+
+## Build
+
+```bash
+npx tsc
+```
+
+## Format
+
+```bash
+npm run fix
+```
+
 ## Run tests
 
-```sh
+```bash
 npm test
 ```
 
