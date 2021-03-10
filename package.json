@@ -1,0 +1,51 @@
+{
+  "name": "ignore-files",
+  "version": "1.0.0",
+  "description": "A CLI to ignore files by .*ignore.",
+  "keywords": [
+    "ignore",
+    "gitignore",
+    "cli",
+    "filter",
+    "file"
+  ],
+  "homepage": "https://github.com/hata6502/ignore-files#readme",
+  "bugs": {
+    "url": "https://github.com/hata6502/ignore-files/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hata6502/ignore-files.git"
+  },
+  "license": "MIT",
+  "author": "Tomoyuki Hata",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "fix": "prettier --write .",
+    "test": "prettier --check . && tsc --noEmit"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "semantic-release": "^17.4.1",
+    "typescript": "^4.1.3"
+  },
+  "release": {
+    "branches": [
+      "+([0-9])?(.{+([0-9]),x}).x",
+      "main",
+      "next",
+      "next-major",
+      {
+        "name": "beta",
+        "prerelease": true
+      },
+      {
+        "name": "alpha",
+        "prerelease": true
+      }
+    ]
+  }
+}
