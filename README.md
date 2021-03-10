@@ -28,6 +28,8 @@ $ zsh -c "echo **/*.ts" | ignore .gitignore
 src/index.ts
 ```
 
+To use `bash` only, use [globstar](https://www.linuxjournal.com/content/globstar-new-bash-globbing-option).
+
 ## Run tests
 
 ```sh
